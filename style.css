@@ -1,6 +1,7 @@
+/* Style Dasar Minimalis */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9f9f9;
+    background-color: #f9f9f9; /* Warna abu-abu sangat muda agar mata tidak cepat lelah */
     color: #333;
     margin: 0;
     padding: 0;
@@ -10,15 +11,21 @@ header {
     text-align: center;
     padding: 50px 20px;
     background: #fff;
+    border-bottom: 1px solid #eee; /* Garis tipis pembatas */
 }
 
-h1 { font-weight: 300; letter-spacing: 2px; }
+h1 { 
+    font-weight: 300; 
+    letter-spacing: 2px; 
+    margin-bottom: 10px;
+}
 
 .gallery {
     display: grid;
+    /* Membuat foto otomatis menyesuaikan lebar layar */
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    padding: 20px;
+    padding: 40px 20px;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -27,18 +34,21 @@ h1 { font-weight: 300; letter-spacing: 2px; }
     background: #fff;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Bayangan sangat halus */
     transition: transform 0.3s ease;
 }
 
+/* Efek saat kursor diarahkan ke foto: foto naik sedikit */
 .photo-card:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
 }
 
 .photo-card img {
     width: 100%;
     height: 300px;
-    object-fit: cover;
+    object-fit: cover; /* Agar foto tidak gepeng */
+    display: block;
 }
 
 .caption {
@@ -46,4 +56,12 @@ h1 { font-weight: 300; letter-spacing: 2px; }
     font-style: italic;
     font-size: 0.9rem;
     color: #666;
+    text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    color: #aaa;
+    font-size: 0.8rem;
 }
